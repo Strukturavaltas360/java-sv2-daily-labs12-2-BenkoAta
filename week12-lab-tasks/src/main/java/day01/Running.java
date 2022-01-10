@@ -3,10 +3,11 @@ package day01;
 import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Running {
-    ArrayList<RunLogEntry> log = new ArrayList<>();
+    private List<RunLogEntry> log = new ArrayList<>();
 
     public Running(Path path) {
         try (Scanner scanner = new Scanner(path)) {
@@ -30,7 +31,7 @@ public class Running {
         return total;
     }
 
-    public ArrayList<RunLogEntry> getLog() {
+    public List<RunLogEntry> getLog() {
         return log;
     }
 }

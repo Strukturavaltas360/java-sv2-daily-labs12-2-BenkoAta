@@ -13,13 +13,13 @@ public class MathAlgorithms {
     }
 
     private int getBigestDivisorOrdered(int big, int small) {
-        for (int divisor = 1; divisor <= small / divisor; divisor ++) {
+        for (int divisor = 1; divisor <= small; divisor ++) {
             int divisor2 = 0;
             if (small % divisor == 0) {
                 divisor2 = small / divisor;
-            }
-            if (divisor2 > 0 && big % divisor2 == 0) {
-                return divisor2;
+                if (big % divisor2 == 0) {
+                    return divisor2;
+                }
             }
         }
         return 1;
